@@ -1,9 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 
 const Theme = createTheme({
-  direction:"rtl"
+  direction: "rtl",
   components: {
-    
     MuiCssBaseline: {
       styleOverrides: {
         body: {
