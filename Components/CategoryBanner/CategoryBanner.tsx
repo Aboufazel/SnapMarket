@@ -25,8 +25,8 @@ const CategoryBanner = (props: Props) => {
       </Grid>
       <Grid item xs={12}  display={'flex'}  justifyContent={'space-between'} gap={{ xs: '13px', lg: '0px' }} >
         {dataCard.slice(0,4).map(item=>(
-          <Grid width={{xs:'250px',sm:'280px'}} height={'88px'} my={3}>
-            <CategoryCard title={item.title} image={item.image} priceReduction={item.priceReduction}/>
+          <Grid key={item.id} width={{xs:'250px',sm:'280px'}} height={'88px'} my={3}>
+            <CategoryCard  title={item.title} image={item.image} priceReduction={item.priceReduction}/>
           </Grid>
         ))}
       </Grid>

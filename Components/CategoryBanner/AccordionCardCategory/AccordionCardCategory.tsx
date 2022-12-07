@@ -25,12 +25,12 @@ const AccordionCardCategory = (props: Props) => {
     }
 
     return (
-        <Grid xs={12}>
+        <Grid item  xs={12}>
             {show ?
                  <Grid  item xs={12}  my={{xs:15,md:6,lg:4}}  display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'} gap={{ xs: '12px',md:'6px', lg: '10px' }} >
                  {dataCard.slice(4,20).map(item=>(
-                   <Grid  width={{md:'230px',lg:'280px'}} height={{xs:'88px',md:'20px'}} m={'0 0 120px 0'}>
-                     <CategoryCard title={item.title} image={item.image} priceReduction={item.priceReduction}/>
+                   <Grid key={item.id} width={{md:'230px',lg:'280px'}} height={{xs:'88px',md:'20px'}} m={'0 0 120px 0'}>
+                     <CategoryCard  title={item.title} image={item.image} priceReduction={item.priceReduction}/>
                    </Grid>
                  ))}
                </Grid>:
