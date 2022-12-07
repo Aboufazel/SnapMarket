@@ -16,10 +16,10 @@ export const dataGoodsFooter:dataGoodsFooterType[]=[
     {id:4,image:image4,Description:'سفارشات با بسته‌بندی مناسب ارسال می‌شود',title:' بسته بندی مناسب'},
 ]
 export const dataApplicationFooter:dataApplicationFooterType[]=[
-    {id:1,image:bazzar,title:'bazzar',width:151,height:45},
-    {id:2,image:google,title:'google',width:151,height:45},
-    {id:3,image:sibapp,title:'sibapp',width:151,height:45},
-    {id:4,image:iapps,title:'iapps',width:151,height:45},
-    {id:5,image:image5,title:'newMobile',width:520,height:320},
+    {id:1,image:bazzar,title:'bazzar'},
+    {id:2,image:google,title:'google'},
+    {id:3,image:sibapp,title:'sibapp'},
+    {id:4,image:iapps,title:'iapps'},
+    {id:5,image:image5,title:'newMobile'},
    
 ]

@@ -9,7 +9,7 @@ type Props = {}
 
 const BottomFooter = (props: Props) => {
     return (
-        <Grid container item sx={{ direction: 'rtl' }} xs={12} display={'flex'} >
+        <Grid container item sx={{ direction: 'rtl' }} xs={12} display={'flex'} mt={{xs:'80px',md:'0px'}}>
             <Grid item xs={2.8} display={'flex'} flexDirection={'column'}>
                 <Typography sx={{ fontWeight: 'bold', fontSize: '16px' }}>درباره‌ما</Typography>
                 <Typography sx={{ fontSize: '14px', lineHeight: '1.8rem', color: 'rgb(117, 117, 117)' }}>
@@ -23,7 +23,7 @@ const BottomFooter = (props: Props) => {
                 </Typography>
                 <ul style={{ listStyleType: 'none', fontSize: '14px', lineHeight: '2.1rem' }}>
                     {dataAccessFooter.map(item => (
-                        <Link href={item.href} style={{ color: 'rgb(117, 117, 117)' }}>
+                        <Link key={item.id} href={item.href} style={{ color: 'rgb(117, 117, 117)' }}>
                             <li>{item.title}</li>
                         </Link>
                     ))}
@@ -36,14 +36,14 @@ const BottomFooter = (props: Props) => {
                 </Typography>
                 <ul style={{ listStyleType: 'none', fontSize: '14px', lineHeight: '2rem', color: 'rgb(117, 117, 117)', padding: '0 0 0 30px' }}>
                     {dataContactUsFooter.map(item => (
-                        <li>{item.title} {item.value}</li>
+                        <li key={item.id}>{item.title} {item.value}</li>
                     ))}
                 </ul>
             </Grid>
-            <Grid item xs={3.2}  display={'flex'}  justifyContent={'space-evenly'} alignItems={'center'} gap={1} flexWrap={{xs:'wrap',lg:'nowrap'}}>   
+            <Grid item xs={3.2}  pt={5} display={'flex'}  justifyContent={'space-evenly'} alignItems={'start'} gap={1} >   
                 {dataLogoFooter.map(item => (
-                    <Grid  bgcolor={'common.white'} boxShadow={3} borderRadius={1}>
-                        <Image src={item.image} alt={'logo'} width={100} height={100} />
+                    <Grid key={item.id} width={{xs:'80px'}}height={{xs:'80px'}} bgcolor={'common.white'} boxShadow={3} borderRadius={1}>
+                        <Image src={item.image} alt={'logo'} style={{width:'100%',height:'100%'}}/>
                     </Grid>
                 ))}
             </Grid>

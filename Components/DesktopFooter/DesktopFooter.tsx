@@ -9,12 +9,12 @@ type Props = {}
 
 const DesktopFooter = (props: Props) => {
     return (
-       <Grid display={{xs:'none',md:'flex'}}>
+       <Grid display={{xs:'none',sm:'flex'}}>
          <Container>
             <SendGoodsFooter />
             <ApplicationFooter />
             <BottomFooter />
-            <Grid mb={3} pr={40} display={'flex'}  justifyContent={'center'} gap={4} color={'rgb(117,117,117)'} alignItems={'center'}>
+            <Grid mb={3} pr={{xs:'210px',md:'240px',lg:'300px'}} display={'flex'}  justifyContent={'center'} gap={4} color={'rgb(117,117,117)'} alignItems={'center'}>
                 <InstagramIcon />
                 <TwitterIcon />
                 <Typography sx={{fontSize:'0.8rem'}}>
