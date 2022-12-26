@@ -19,14 +19,14 @@ const CategoryCard = ({ title, image, priceReduction }: Props) => {
                     <Image src={image} alt={title} style={{ width: '100%', height: '100%' }} />
                 </Grid>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <CardContent sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column' }} >
+                    <Grid pt={3} sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column' }} >
                         <Typography sx={{ fontSize: '16px', fontWeight: 'bold' }}>
                             {title}
                         </Typography>
                         <Typography mt={2} p={'10px 8px'} textAlign={'center'} sx={{ fontSize: '14px', color: 'rgb(21,195,42)', transform: 'skew(-10deg)', fontWeight: '300', bgcolor: 'rgb(243,252,244)' }}>
                             {priceReduction}
                         </Typography>
-                    </CardContent>
+                    </Grid>
 
                 </Box>
             </Card>
