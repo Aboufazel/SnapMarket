@@ -14,7 +14,7 @@ type Props = {
 const CategoryCard = ({ title, image, priceReduction }: Props) => {
     return (
         <>
-            <Card sx={{ display: 'flex' }} >
+            <Grid sx={{ display: 'flex',boxShadow:'rgb(0 0 0  2%) 0px 0.2rem 0.7rem 0px',border:'0.1rem solid rgba(163, 163, 163, 0.25)',borderRadius:'0.3rem' }} >
                 <Grid width={{xs:'170px', md: '100px' }}>
                     <Image src={image} alt={title} style={{ width: '100%', height: '100%' }} />
                 </Grid>
@@ -29,7 +29,7 @@ const CategoryCard = ({ title, image, priceReduction }: Props) => {
                     </Grid>
 
                 </Box>
-            </Card>
+            </Grid>
             <Grid display={{ xs: 'flex', md: 'none' }} justifyContent={'center'} mt={1}>
                 <Typography sx={{ fontSize: '16px', fontWeight: 'bold' }}>
                     {title}
