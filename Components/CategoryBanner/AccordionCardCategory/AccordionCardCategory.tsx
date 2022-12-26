@@ -27,9 +27,9 @@ const AccordionCardCategory = (props: Props) => {
     return (
         <Grid item xs={12}>
             {show ?
-                <Grid item xs={12} my={{ xs: 15, md: 2, lg: 4 }} display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'} gap={{ xs: '12px', md: '6px', lg: '10px' }} >
+                <Grid item xs={12} my={{ xs: 15, md: 2, lg: 4 }} display={'flex'} flexWrap={'wrap'}  gap={{ xs: '12px', md: '6px', lg: '10px' }} >
                     {dataCard.slice(4, 20).map(item => (
-                        <Grid key={item.id} width={{ md: '235px', lg: '280px' }} height={{ xs: '88px', md: '8px' }} m={'0 0 120px 0'}>
+                        <Grid  key={item.id} width={{ md: '235px', lg: '280px' }} height={{ xs: '88px', md: '8px' }} m={'0 0 120px 0'}>
                             <CategoryCard title={item.title} image={item.image} priceReduction={item.priceReduction} />
                         </Grid>
                     ))}
