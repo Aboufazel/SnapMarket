@@ -14,7 +14,7 @@ type Props = {
 const CategoryCard = ({ title, image, priceReduction }: Props) => {
     return (
         <>
-            <Grid sx={{ display: 'flex',boxShadow:'rgb(0 0 0  2%) 0px 0.2rem 0.7rem 0px',borderRadius:'0.3rem' }} border={'0.1rem solid rgba(163, 163, 163, 0.25)'}>
+            <Grid sx={{ display: 'flex',boxShadow:'rgb(0 0 0  2%) 0px 0.2rem 0.7rem 0px',borderRadius:'0.3rem',cursor:'pointer' }} border={'0.1rem solid rgba(163, 163, 163, 0.25)'}>
                 <Grid width={{xs:'167px', md: '100px' }}>
                     <Image src={image} alt={title} style={{ width: '100%', height: '100%' }} />
                 </Grid>

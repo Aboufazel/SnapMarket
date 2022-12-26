@@ -11,7 +11,7 @@ type Props = {
 
 const CategoryBannerCard = ({ image, title, priceReduction }: Props) => {
   return (
-    <Grid >
+    <Grid sx={{cursor:'pointer'}}>
       <Grid item container xs={11} md={12} sx={{ border: ' 0.1rem solid rgba(255, 203, 150, 0.43)', borderRadius: '0.5rem' }} bgcolor={'rgba(255, 203, 150, 0.27)'} display={'flex'}width={{lg:'375px'}}height={{lg:'150px'}} >
         <Grid item xs={12} md={4} height={{xs:'100px',sm:'220px',md:'100px'}} width={{xs:'100px',sm:'245px',md:'200px'}} >
           <Image src={image} alt={title} style={{ width: '100%', height: '100%' }} />
