@@ -10,10 +10,12 @@ import SeeAllCard from "../SecondarySwiperCard/SeeAllCard";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useSwiper } from 'swiper/react';
 
 const SecondarySwiperContainer = () => {
 
     SwiperCore.use([Navigation, Pagination]);
+    const swiper = useSwiper();
 
     const RightSliderButton = {
         paddingX: "20px",
@@ -44,9 +46,17 @@ const SecondarySwiperContainer = () => {
         boxShadow: "0 0 5px rgba(1 , 1 , 1 , 0.2)",
     }
 
+    const Container = {
+        display:"flex",
+        flexDirection:"column",
+        paddingY:"24px",
+        paddingX:"16px",
+        width:"100%",
+        backgroundColor:"primary.main"
+    }
+
     return (
-        <Grid display={"flex"} paddingY={"24px"} paddingX={"16px"} flexDirection={"column"} width={"100%"}
-              sx={{backgroundColor: "primary.main"}}>
+        <Grid sx={Container}>
             <Grid display={"flex"}
                   alignItems={"center"}
                   width={"90%"}
