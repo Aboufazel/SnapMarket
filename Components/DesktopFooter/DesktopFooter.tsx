@@ -9,18 +9,11 @@ type Props = {}
 
 const DesktopFooter = (props: Props) => {
     return (
-       <Grid bgcolor={"common.white"} mt={3} display={{xs:'none',md:'flex'}}>
+       <Grid width={"auto"} bgcolor={"common.white"} pt={2} mt={3} display={{xs:'none',sm:'flex'}}>
          <Container>
             <SendGoodsFooter />
             <ApplicationFooter />
             <BottomFooter />
-            <Grid mb={3} pr={40} display={'flex'}  justifyContent={'center'} gap={4} color={'rgb(117,117,117)'} alignItems={'center'}>
-                <InstagramIcon />
-                <TwitterIcon />
-                <Typography sx={{fontSize:'0.8rem'}}>
-                    {'info@snapp.market'}
-                </Typography>
-            </Grid>
         </Container>
        </Grid>
     )

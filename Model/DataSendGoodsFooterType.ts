@@ -9,6 +9,6 @@ export interface dataApplicationFooterType {
     id:number,
     image:any|string,
     title:string,
-    width:number,
-    height:number
+    width?:number,
+    height?:number
 }

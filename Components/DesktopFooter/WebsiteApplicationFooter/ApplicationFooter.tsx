@@ -8,25 +8,23 @@ type Props = {}
 
 const ApplicationFooter = (props: Props) => {
     return (
-        <Grid sx={{ direction: 'rtl' }} container>
-            <Grid display={'flex'} item container xs={12}>
-                <Grid item container xs={12}sm={8} md={6} lg={8} display={'flex'} flexDirection={'column'} justifyContent={'center'} pl={10}>
+        <Grid pb={6} sx={{ direction: 'rtl' }} container justifyContent={'space-between'}>
+            <Grid sx={{display:"flex" , justifyContent:"space-between"}}>
+                <Grid pl={{sm:"10px" , md:"80px" , lg:"260px"}} container display={'flex'} flexDirection={'column'} justifyContent={'center'}>
                     <Grid display={'flex'} flexDirection={'column'}>
-                        <Typography sx={{fontSize:'17px',fontWeight:'bold'}}>{'دانلود اپلیکیشن'}</Typography>
-                        <Typography py={2} sx={{fontSize:'14px',color:'rgb(117, 117, 117)'}}>{'اپلیکیشن اسنپ مارکت را دانلود کنید و هر روز تخفیفات هیجان انگیز مشاهده کنید'}</Typography>
+                        <Typography fontSize={{sm:'1.4rem' , md:"1.6rem"}} variant='h3'>{'دانلود اپلیکیشن'}</Typography>
+                        <Typography fontSize={{sm:'1.2rem' , md:"1.4rem"}} py={2} pb={2.5} variant='subtitle1'>{'اپلیکیشن اسنپ مارکت را دانلود کنید و هر روز تخفیفات هیجان انگیز مشاهده کنید'}</Typography>
                     </Grid>
-                    <Grid display={'flex'}flexWrap={'wrap'} gap={1.5}>
+                    <Grid width={{sm:118 , lg:151}} height={{sm:35 , lg:45}} sx={{display:"flex"}} gap={0.75}>
                         {dataApplicationFooter.slice(0, 4).map(item => (
-                            <Image src={item.image} alt={item.title} width={item.width} height={item.height} />
+                            <Image key={item.id} src={item.image} alt={item.title} style={{width:"100%" , height:"100%"}} />
                         ))}
                     </Grid>
-                   
                 </Grid>
-                <Grid item xs={12} sm={4} md={6}lg={4} display={'flex'}>
+                <Grid pt={3}  width={{sm:"200px" , md:"260px"}} height={{sm:"170px" , md:"180px"}}sx={{display:"flex"}}>
                     {dataApplicationFooter.slice(4, 7).map(item => (
-                        <Image src={item.image} alt={item.title} width={item.width} height={item.height} />
+                        <Image style={{width:"100%" , height:"100%"}} key={item.id} src={item.image} alt={item.title}/>
                     ))}
-                   
                 </Grid>
             </Grid>
         </Grid>
