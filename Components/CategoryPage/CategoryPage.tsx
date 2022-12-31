@@ -8,12 +8,12 @@ type Props = {};
 
 const CategoryPage = (props: Props) => {
   return (
-    <Grid>
-      <Grid display={"flex"} justifyContent={"space-around"} item xs={12}>
-        <Grid width={"25%"} position="relative">
+    <Grid mt={10}>
+      <Grid display={"flex"} justifyContent={"space-around"} item xs={12} >
+        <Grid width={"20%"} position="relative" mt={0.5}>
           <SidebarCategoryPage />
         </Grid>
-        <Grid width={"70%"}>
+        <Grid width={"75%"}>
           <MainCategoryPage />
         </Grid>
       </Grid>
