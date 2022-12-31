@@ -9,13 +9,10 @@ import CategoryPage from "../Components/CategoryPage/CategoryPage";
 
 export default function Home() {
   return (
-    <ThemeProvider theme={Theme}>
+   
       <Grid>
-        <CssBaseLine />
-        <MobileCategoryPage />
-        {/* <Slider/> */}
-        {/* <CategoryPage/> */}
+       
       </Grid>
-    </ThemeProvider>
+   
   );
 }
